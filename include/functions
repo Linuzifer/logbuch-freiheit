@@ -1,0 +1,31 @@
+## standard functions
+
+function require {
+ toolname=$1
+ arch=`uname`
+ which $toolname > /dev/null
+ if [ ! $? -eq 0 ]; then
+  echo "Need to install $toolname ..."
+  case "$arch" in
+   Darwin)
+    brew install $toolname
+    ;;
+   Linux)
+    sudo apt-get install $toolname
+    ;;
+   *)
+    echo Please install $1!
+    exit 1
+  esac
+ fi
+}
+
+## special functions
+
+function getslug {
+  orig_filename="$1"
+  prefix="$2"
+  postfix_length=17
+  title=`echo "$orig_filename" | sed "s,$prefix,,g" | sed "s,- ,,g" | rev | cut -c$postfix_length- | rev | sed "s/ /_/g"`
+  echo "$title"
+}
