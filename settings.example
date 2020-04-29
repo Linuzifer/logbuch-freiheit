@@ -1,0 +1,3 @@
+YT_PLAYLIST="https://www.youtube.com/playlist?list=PLt07PTYqr3BBYY48-S-jg_Gnh_fL1fZzG"
+YT_PREFIX="./Logbuch -Freiheit " # start with ./
+PODCAST_SLUG="logbuch-freiheit"
