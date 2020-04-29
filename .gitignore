@@ -3,3 +3,4 @@ youtube/*
 logbuch-freiheit/
 settings
 settings.py
+__pycache__/
