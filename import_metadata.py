@@ -3,6 +3,7 @@ import json
 import sys
 import datetime
 import urllib.request
+import os
 
 # parse arguments
 if len(sys.argv)<2:
@@ -11,8 +12,22 @@ if len(sys.argv)<2:
 file=sys.argv[1]
 
 # settings
-prefix="Logbuch_-Freiheit_"
-podcast_slug="logbuch-freiheit"
+from settings import *  
+if podcast_slug == "" or prefix == "":
+	print("please edit settings.py first.")
+	sys.exit(1)
+
+# Make sure we are in the youtube directory
+working_directory=os.getcwd()
+base_directory=os.path.dirname(os.path.realpath(__file__))
+if working_directory != base_directory + "/youtube":
+	try:
+		os.chdir(base_directory + "/youtube")
+	except:
+		print("We are not where we need to be:")
+		print(os.getcwd())
+		print("Usually, this script will be called by build_site.sh and you don't need to worry about it.")
+		sys.exit(0)
 
 # deduce slug
 slug=str(file).replace("- ","").replace("\ ","_").replace(" ","_").replace(prefix,"")[:-22]
