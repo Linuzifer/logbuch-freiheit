@@ -24,7 +24,7 @@ cd "$PODCAST_SLUG"
 # setup octopod
 cat <<EOF >> Gemfile
 source "https://rubygems.org"
-gem "jekyll", "~> 4.0"
+gem "jekyll", "~> 4.0.0"
 gem "jekyll-octopod"
 EOF
 bundle install
