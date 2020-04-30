@@ -32,10 +32,11 @@ if working_directory != base_directory + "/youtube":
 # deduce slug
 slug=str(file).replace("- ","").replace("\ ","_").replace(" ","_").replace(prefix,"")[:-22]
 
-# deduce import json
+# import json
 json_file=open(file)
 data = json.load(json_file)
-#for p in data:
+# This json has a lot to offer, most of which we are not using. Uncomment the following two lines to get an overview:
+# for p in data:
 #	print(p, data[p])
 
 # check timestamp
