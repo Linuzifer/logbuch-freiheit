@@ -7,7 +7,7 @@ if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
   exit 1
 fi
 
-if [[ ! -f "$PODCAST_SLUG/logbuch-freiheit/apple-touch-icon-precomposed.png" ]]; then
+if [[ ! -f "$PODCAST_SLUG/apple-touch-icon-precomposed.png" ]]; then
 	echo "we need to run the installer first…" # apple-touch-icon-precomposed.png is created during optopod setup
 	./install.sh
 fi
