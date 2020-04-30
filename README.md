@@ -25,18 +25,14 @@ nano settings
 nano config.yml
 ```
 
-### 2. Install jekyll and octopod
+### 2. Build site
 
-```console
-./install.sh
-```
-
-### 3. Build site
+```./install.sh``` will be called at first launch, so you can immediately run the site builder.
 
 ```console
 ./build_site.sh
 ```
 
-### 4. Deploy site
+### 3. Deploy site
 
 After preview, you you will be prompted for file upload.
