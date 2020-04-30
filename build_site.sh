@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-## Constants
+# constants
 source settings
 if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
-  echo "Please edit settings first."
-  exit 1
+	echo "please edit settings first."
+	echo "to restore from repo:"
+	echo "cp settings.py.example settings.py"
+    echo "cp settings.example settings"
+	exit 1
 fi
 
 if [[ ! -f "$PODCAST_SLUG/apple-touch-icon-precomposed.png" ]]; then
