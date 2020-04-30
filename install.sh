@@ -7,6 +7,12 @@ if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
 	exit 1
 fi
 
+# functions
+source include/functions
+
+# dependencies
+require ruby
+
 # setup jekyll
 sudo gem install bundler jekyll
 jekyll new "$PODCAST_SLUG"
