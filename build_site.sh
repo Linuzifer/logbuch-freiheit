@@ -6,7 +6,7 @@ if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
 	echo "please edit settings first."
 	echo "to restore from repo:"
 	echo "cp settings.py.example settings.py"
-    echo "cp settings.example settings"
+	echo "cp settings.example settings"
 	exit 1
 fi
 
