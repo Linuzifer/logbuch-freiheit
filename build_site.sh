@@ -7,6 +7,11 @@ if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
   exit 1
 fi
 
+if [[ ! -f "$PODCAST_SLUG/_config.yml" ]]; then
+	echo "we need to run the installer first…"
+	./install.sh
+fi
+
 ## functions
 source include/functions
 
