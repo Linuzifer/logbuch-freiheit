@@ -49,4 +49,5 @@ octopod serve
 # deploy site
 echo "Deploy? [ctrl+c / enter]"
 read yourmind
+octopod build
 octopod deploy
