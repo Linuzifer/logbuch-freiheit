@@ -4,6 +4,9 @@
 source settings
 if [[ "$PODCAST_SLUG" == "" || "$YT_PLAYLIST" == "" ]]; then
 	echo "please edit settings first."
+	echo "to restore from repo:"
+	echo "cp settings.py.example settings.py"
+    echo "cp settings.example settings"
 	exit 1
 fi
 
@@ -28,5 +31,5 @@ bundle install
 sudo gem install jekyll-octopod
 octopod setup
 rm index.markdown
-git checkout "_config.yml" # It makes sense to keep this config in the repo. Make sure not to push sensitive information.
-git checkout "imprint.md"  # It makes sense to keep imprint in the repo.
+cp ../_config.yml .
+cp ../imprint.md .
