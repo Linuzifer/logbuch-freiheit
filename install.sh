@@ -19,7 +19,7 @@ jekyll new "$PODCAST_SLUG"
 cd "$PODCAST_SLUG"
 
 # setup octopod
-echo <<EOF >> Gemfile
+cat <<EOF >> Gemfile
 source "https://rubygems.org"
 gem "jekyll", "~> 4.0"
 gem "jekyll-octopod"
