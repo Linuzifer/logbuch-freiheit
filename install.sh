@@ -33,3 +33,6 @@ octopod setup
 rm index.markdown
 cp ../_config.yml .
 cp ../imprint.md .
+rm episodes/episode0.*
+rm _posts/2016-03-22-episode0.md
+rm _posts/*-welcome-to-jekyll.markdown
