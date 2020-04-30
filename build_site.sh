@@ -43,7 +43,10 @@ done
 
 # preview site
 cd "../$PODCAST_SLUG"
+open http://localhost:4000
 octopod serve
 
 # deploy site
+echo "Deploy? [ctrl+c / enter]"
+read yourmind
 octopod deploy
