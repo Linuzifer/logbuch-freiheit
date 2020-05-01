@@ -41,8 +41,27 @@ for file in ./*.mp4; do
  python3 ../import_metadata.py "$metadata"
 done
 
-# preview site
+# prepare site
 cd "../$PODCAST_SLUG"
+
+# octopod customization
+cp ../_config.yml .
+cp ../imprint.md .
+cp ../sidebar.html _includes/sidebar.html
+cat <<EOF > feed.mp4.json
+---
+layout: feed
+format: mp4
+---
+EOF
+cat <<EOF > episodes.mp4.rss
+---
+layout: feed
+format: mp4
+---
+EOF
+
+# preview site
 open http://localhost:4000
 octopod serve
 

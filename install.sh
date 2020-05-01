@@ -48,20 +48,3 @@ rm feed.mp3.json
 rm feed.ogg.json
 rm episodes.mp3.rss
 rm episodes.ogg.rss
-
-# octopod customization
-cp ../_config.yml .
-cp ../imprint.md .
-cp ../sidebar.html _includes/sidebar.html
-cat <<EOF > feed.mp4.json
----
-layout: feed
-format: mp4
----
-EOF
-cat <<EOF > episodes.mp4.rss
----
-layout: feed
-format: mp4
----
-EOF
