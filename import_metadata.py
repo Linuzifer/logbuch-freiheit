@@ -59,6 +59,7 @@ with open(post_file, 'w') as f:
 	print("duration: " + str(datetime.timedelta(seconds=data["duration"])), file=f)
 	print("audio:", file=f)
 	print("  m4a: " + slug + ".m4a", file=f)
+	print("  mp4: " + slug + ".mp4", file=f)
 	print("---", file=f)
 	print("", file=f) 
 	print("{% podigee_player page %}", file=f)
