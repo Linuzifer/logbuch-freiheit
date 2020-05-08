@@ -48,6 +48,7 @@ cd "../$PODCAST_SLUG"
 cp ../_config.yml .
 cp ../imprint.md .
 cp ../sidebar.html _includes/sidebar.html
+cp ../default.html _layouts/default.html
 cat <<EOF > feed.mp4.json
 ---
 layout: feed
