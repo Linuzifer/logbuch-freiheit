@@ -4,6 +4,7 @@
     {% if site.subtitle %}<br/><small>{{ site.subtitle }}</small>{% endif %}
   </h3>
 </div>
+<!--
 
 <p class="text-center">
   <img width="200px" src="{{ site.url }}/img/logo-360x360.png" alt="{{ site.title }} logo">
@@ -42,6 +43,7 @@
 </p>
 
 <hr/>
+-->
 
 <h4>Team</h4>
 
@@ -49,6 +51,8 @@
     <li><a href="https://freiheitsrechte.org/team/">Lea Beckmann</a></li>
     <li><a href="https://linus-neumann.de">Linus Neumann</a></li>
 </ul>
+
+<!--
 
 <h4>RSS-Feeds</h4>
 
@@ -66,7 +70,23 @@
   {% endfor %}
 </ol>
 
+-->
 
+<h4>RSS-Feeds</h4>
+
+<ol type="i">
+   <li><a href="/episodes.m4a.rss"><i class="fa fa-rss"></i> Audio RSS</a></li>
+   <li><a href="/episodes.mp4.rss"><i class="fa fa-rss"></i> Video RSS</a></li>
+</ol>
+
+<h4>JSON-Feeds</h4>
+
+<ol type="i">
+    <li><a href="/feed.m4a.json"><i class="fa fa-rss-square"></i> Audio JSON</a></li>
+    <li><a href="/feed.mp4.json"><i class="fa fa-rss-square"></i> Video JSON</a></li>
+</ol>
+
+<!--
 
 <h4>Directories</h4>
 
@@ -88,15 +108,13 @@
   {% endif %}
 </ol>
 
-<!--
-
 <h4>Credits</h4>
 
 <ul>
   <li>Music: <a href="http://www.bensound.com/royalty-free-music">Bensound</a></li>
 </ul>
 
--->
+
 
 <h4>License</h4>
 
@@ -109,6 +127,8 @@
     {% endif %}
   </a>
 {% endif %}
+
+-->
 
 <hr/>
 
